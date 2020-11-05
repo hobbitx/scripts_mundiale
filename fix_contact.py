@@ -12,7 +12,7 @@ def getSource(idBlip):
 
 
 def getRequest(skip):
-    auth = "Key Y2xhcm9jb21lcmNpYWxyb3V0ZXI6OWpUWWEzVGs5b0ZPZXRTMkp5THQ="
+    auth = ""
     body_settings = {
         "id": str(uuid.uuid4()),
         "method": "get",
@@ -25,7 +25,7 @@ def getRequest(skip):
     return req
 
 erros = []
-auth = "Key Y2xhcm9jb21lcmNpYWxyb3V0ZXI6OWpUWWEzVGs5b0ZPZXRTMkp5THQ="
+auth = ""
 skip = 0
 req = getRequest(skip)
 with urllib.request.urlopen(req) as settings:
