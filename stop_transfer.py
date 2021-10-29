@@ -3,6 +3,8 @@ import urllib.request
 import json
 from tkinter.filedialog import askopenfilename
 
+
+base_url = "https://http.msging.net/commands"
 def getRequest(auth,resource):
     
     body_settings = {
@@ -12,7 +14,7 @@ def getRequest(auth,resource):
         "type": "text/plain",
         "resource": resource
     }
-    req = urllib.request.Request(url="https://http.msging.net/commands",
+    req = urllib.request.Request(url=base_url,
                              data=bytes(json.dumps(body_settings), encoding="utf-8"), method='POST')
     req.add_header("Authorization", auth)
     req.add_header("Content-Type", "application/json")

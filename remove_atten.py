@@ -3,24 +3,13 @@ import urllib.request, json
 import json
 from tkinter.filedialog import askopenfilename
 import gc
+from objects import Attendants, BotAgents
 # buscar atendentes de todos os bots
 # buscar na planilha proximo atendente 
 # verificar bot a bot se ele esta como atendente
 # se estiver remover 
 # ir para proximo
 
-class Attendants:
-    def __init__(self, identity, fullname,email,teams,status):
-        self.identity = identity
-        self.fullname = fullname
-        self.email = email
-        self.teams = teams
-        self.status = status
-
-class BotAgents:
-    def __init__ (self,auth,attendants):
-        self.attendants = attendants
-        self.auth = auth
     
 def checkInBot(identity,list_agents):
     for agent in list_agents:
